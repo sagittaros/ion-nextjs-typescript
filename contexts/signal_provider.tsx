@@ -29,6 +29,7 @@ const SignalProvider: React.FC<SignalProps> = ({ children, backend }) => {
   };
 
   useEffect(() => {
+    console.log("using backend:", backend);
     const cl = new Client({ url: backend });
     console.log("Created client:", cl);
     setClient(cl);
