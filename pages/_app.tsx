@@ -19,12 +19,8 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Voicelane</title>
+        <title>Ion NextJS typescript</title>
         <link rel="icon" href="/favicon.ico" />
-        <script
-          src="https://kit.fontawesome.com/495be5c052.js"
-          crossOrigin="anonymous"
-        ></script>
       </Head>
       <SignalProvider backend={process.env.NEXT_PUBLIC_ION_BACKEND}>
         <Component {...pageProps} />
