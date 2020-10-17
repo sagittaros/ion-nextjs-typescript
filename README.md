@@ -28,7 +28,8 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 Read [NextJS environment variable's guide](https://nextjs.org/docs/basic-features/environment-variables)
 
-Refer to [the example](.env.local.sample)
+Refer to [the example](.env.sample) and add your environment to
+`.env.local`, `.env.production`, `.env` accordingly
 
 ### Deploy
 
