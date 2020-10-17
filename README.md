@@ -18,7 +18,7 @@ You can start editing the page by modifying `pages/index.js`. The page auto-upda
 
 1. Prepare up a server with docker capabilities (DigitalOcean has that out of the box)
 2. Clone `https://github.com/sagittaros/ion`
-3. Export `CADDY_DOMAIN=yourdomain` and `CADDY_EMAIL=youremail` that correpond to this [this](https://github.com/sagittaros/ion/blob/aee5acb82207d137c8eb87815e34a5f25facdc7c/docker-compose.yml#L97)
+3. Export `CADDY_DOMAIN=yourdomain` and `CADDY_EMAIL=youremail` that correpond to [this](https://github.com/sagittaros/ion/blob/aee5acb82207d137c8eb87815e34a5f25facdc7c/docker-compose.yml#L97)
 4. Run `docker-compose up --build .`
 5. Be excited.
 
