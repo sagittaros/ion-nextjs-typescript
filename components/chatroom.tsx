@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { LocalStream, Stream } from "ion-sdk-js";
+import { memo, useEffect, useState } from "react";
 import { useSignal } from "../contexts/signal_provider";
-import { Client, LocalStream, Stream } from "ion-sdk-js";
 import Speaker from "./speaker";
 
 export interface ChatroomProps {
@@ -15,7 +15,7 @@ const stopMediaStream = (stream: Stream) => {
 };
 
 const Chatroom: React.FC<ChatroomProps> = ({ room }) => {
-  const { client, ready }: { client: Client; ready: boolean } = useSignal();
+  const { client, ready } = useSignal();
   const [localStream, setLocalStream] = useState<LocalStream>();
   const [remoteStreams, setRemoteStreams] = useState<any[]>([]);
 
@@ -97,4 +97,4 @@ const Chatroom: React.FC<ChatroomProps> = ({ room }) => {
   );
 };
 
-export default Chatroom;
+export default memo(Chatroom);

@@ -7,12 +7,17 @@ import {
 } from "react";
 import { Client } from "ion-sdk-js";
 
-export interface SignalProps {
+type ContextProps = {
+  client: Client;
+  ready: boolean;
+};
+
+interface SignalProps {
   children: ReactNode;
   backend: string;
 }
 
-const SignalContext = createContext(undefined);
+const SignalContext = createContext<Partial<ContextProps>>({});
 
 const SignalProvider: React.FC<SignalProps> = ({ children, backend }) => {
   const [client, setClient] = useState<Client | undefined>();
