@@ -52,7 +52,9 @@ const Chatroom: React.FC<ChatroomProps> = ({ room }) => {
 
   const streamRemove = (stream: Stream) => {
     console.log("stream-remove %s,%", stream.mid);
-    setRemoteStreams(remoteStreams.filter((item) => item.sid !== stream.mid));
+    setRemoteStreams((prev) => [
+      ...prev.filter((item) => item.sid !== stream.mid),
+    ]);
   };
 
   const broadcast = (mid: any, info: any) => {
